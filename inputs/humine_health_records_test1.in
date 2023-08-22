@@ -1,0 +1,45 @@
+// The program input for humine_health_records_test1/src/main.leo
+[create_study]
+details: StudyDetails = StudyDetails {
+    study_title: 49937943936u64, // Humine and UNMC Pilot Study
+    study_id_int: 10001u64,
+    organization: aleo1lp7809l9klvu0mxr75h2je5msz2rly5wrwsk0wrm7dr8tdeykyqsfl28wm, // Study sponsor/team's wallet address
+    created_date: 1692390181804u64,
+    started_date: 1692390181804u64,
+};
+
+[new_adverse_event]
+study_id_int: u64 = 10001u64;
+details: EventDetails = EventDetails {
+    created_date: 1692390181804u64,
+    completed_date: 1692390181804u64,
+    completed_by: aleo12wc56hh83284v0ucxydjrdevfq0lzw30kpp6z4ke27agzt6p7u8s9ynnaf,
+    study_id_int: 10001u64,
+    event_type: 9u64, // Reserved ID for adverse events -- aka patient going through an unintended and unexpected symptom or event during the trial
+    source_type: 4u64, // Source of the event -- this might be iPhone, Apple Watch, clinical site PC/Mac, etc
+    source_device_id_int: 2353023u64, // Unique Device ID which is generated on-device at the source of data creation
+};
+
+[new_expected_event]
+study_id_int: u64 = 10001u64;
+details: EventDetails = EventDetails {
+    created_date: 1692390181804u64,
+    completed_date: 1692390181804u64,
+    completed_by: aleo12wc56hh83284v0ucxydjrdevfq0lzw30kpp6z4ke27agzt6p7u8s9ynnaf,
+    study_id_int: 10001u64,
+    event_type: 3u64, // One of many IDs for expected events -- normal outcomes as a trial progresses,
+    source_type: 4u64, // Source of the event -- this might be iPhone, Apple Watch, clinical site PC/Mac, etc
+    source_device_id_int: 2353023u64, // Unique Device ID which is generated on-device at the source of data creation
+};
+
+[new_task_completion]
+study_id_int: u64 = 10001u64;
+details: TaskDetails = TaskDetails {
+    created_date: 1692390181804u64,
+    completed_date: 1692390181804u64,
+    completed_by: aleo12wc56hh83284v0ucxydjrdevfq0lzw30kpp6z4ke27agzt6p7u8s9ynnaf,
+    study_id_int: 10001u64,
+    task_type: 3876454u64, // Unique Task ID for each study -- expected tasks defined by study protocol,
+    source_type: 4u64, // Source of the task completion -- this might be iPhone, Apple Watch, clinical site PC/Mac, etc
+    source_device_id_int: 2353023u64, // Unique Device ID which is generated on-device at the source of data creation
+};
